@@ -36,5 +36,6 @@ public:
 	afx_msg void OnBnClickedDraw();
 	afx_msg void OnBnClickedGetimg();
 	afx_msg void OnBnClickedAction();
+	int radius = (rand()%150)+1;
 	int CDrawCircleDlg::Radius();
 };
