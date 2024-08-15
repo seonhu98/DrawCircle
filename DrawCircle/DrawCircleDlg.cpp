@@ -169,7 +169,7 @@ HCURSOR CDrawCircleDlg::OnQueryDragIcon()
 int CDrawCircleDlg::Radius()
 {
 	using namespace cv;
-	
+	int radius = (rand()%150)+1;
 	int startx = 0;
 	int starty = 0;
 	CString csx1, csy1;
@@ -201,7 +201,7 @@ int CDrawCircleDlg::Radius()
 	imwrite(filename, image);
 	waitKey(0);
 	destroyAllWindows;
-
+	tossradius = radius;
 	return radius;
 }
 
@@ -256,9 +256,8 @@ void CDrawCircleDlg::OnBnClickedAction()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 	using namespace cv;
-	srand(time(NULL));
 
-	int radius = Radius();
+	int radius = tossradius;
 	int count = (rand() % 10)+1;
 	int startx = 0;
 	int starty = 0;
