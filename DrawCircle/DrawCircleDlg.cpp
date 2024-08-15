@@ -169,9 +169,7 @@ HCURSOR CDrawCircleDlg::OnQueryDragIcon()
 int CDrawCircleDlg::Radius()
 {
 	using namespace cv;
-	srand(time(NULL));
-
-	int radius = rand() % 150;
+	
 	int startx = 0;
 	int starty = 0;
 	CString csx1, csy1;
